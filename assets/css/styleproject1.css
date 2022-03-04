@@ -1,0 +1,1719 @@
+
+/********************************************************
+COMMOM CSS 
+********************************************************/
+
+/*déclaration of CSS variables */
+
+/*
+A NOTER que cela pose aussi des soucis pour le validateur CSS qui ne reconnait pas encore :root et les variables.
+*/
+
+:root {
+    --principalColor: #b3cbda;
+    --secondaryColor: #d4916a;
+    --nav: #fff;
+    --hover: #ead5f2;
+    --backgroundColor: #fff;
+    --defaut-font: 'Merriweather' --événementiel-font: "Roboto", sans-serif;
+    }
+
+/*end of CSS variables */
+
+    * {
+    box-sizing: border-box;
+    }
+
+    html {
+    font-size: 62.5%;
+    }
+
+    .container {
+        margin: 0 auto;
+        max-width: 1100px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #000;
+        font-family: var(--événementiel-font);
+        text-align: center;
+        font-weight: lighter;
+        font-size: 2.8rem;
+        align-items: center;
+    }
+
+    h3 a {
+        text-decoration: none;
+    }
+
+    p {
+        font-family: var(--événementiel-font);
+        line-height: 1.5em;
+        font-size: 1.4rem;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    /* *****************************************************************
+HEADER
+***************************************************************** */
+
+    header {
+        width: 100%;
+        background-size: cover;
+        top: 0;
+        position: absolute;
+        z-index: 1;
+
+    }
+    .menu {
+        white-space: nowrap;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        background: #fff;
+    }
+
+    nav ul {
+        max-height: 0px;
+        background: #fff;
+        padding-inline-start: 0;
+        transition: 200ms;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .active ul {
+        max-height: 100vh;
+        margin: 0;
+    }
+    nav ul li{
+        list-style: none;
+        padding: 24px 0;
+        width: 100%;
+        display: block;
+        text-align: center;
+    } 
+
+    nav ul li a{
+        font-family: var(--événementiel-font);
+        text-decoration: none;
+        color:rgb(14, 12, 12);
+        font-size:20px;
+    }
+    
+
+    nav.scroll ul {
+        background: #fff;
+    }
+
+    .hamburg {
+        display: block;
+        color: #e6bf16;
+        background: #fff;
+        width: min-content;
+        box-sizing: border-box;
+        cursor: pointer;
+        text-align: right;
+        padding: 15px 30px;
+        right: 0;
+        position: relative;
+        margin: 0 0 0 auto;
+    }
+    .symbole {
+        position: fixed;
+        top: 0;
+        float: left;
+        margin: 16px 36px;
+        color: #fff;
+        ;
+        font-weight: bold;
+        font-size: 24px;
+
+    }
+
+    .menu {
+        position: relative;
+        transition: 200ms;
+    }
+
+
+    .banner-main {
+        text-align: center;
+        margin-top: 17em;
+    }
+
+    h1.site-title {
+        font-size: 120px;
+    }
+
+    .site-title {
+        font-size: 120px;
+        margin: 0;
+        font-family: 'Fuggles', cursive;
+        font-weight: 400px;
+        line-height: 1;
+        color: black;
+        text-transform: none;
+        letter-spacing: 0;
+    }
+
+    .site-title a {
+        color: #ead5f2;
+        text-decoration: none;
+    }
+
+    .site-description {
+        margin-top: 0;
+    }
+
+    .site-description {
+        text-align: center;
+        color: #444;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 10px auto 0;
+        font: 10px Montserrat, sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    /* *****************************************************************
+FOOTER
+***************************************************************** */
+    footer {
+        color: white;
+        background-color: #18191a;
+        padding: 2rem;
+    }
+
+    .social {
+        padding: 2rem 0;
+    }
+
+    .social {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    a.comments {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .social h3 {
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    .internet {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .internet a {
+        margin: 0 1.5rem;
+        text-decoration: none;
+    }
+
+    .internet a::before {
+        font-family: 'Font Awesome 5 Brands';
+        font-weight: 600;
+        color: white;
+        font-size: 3rem;
+    }
+
+    .facebook::before {
+        content: "\f09a";
+    }
+
+    .twitter::before {
+        content: "\f099";
+    }
+
+    .instagram::before {
+        content: "\f16d";
+    }
+
+    .dribbble::before {
+        content: "\f17d";
+    }
+
+    footer p {
+        text-align: center;
+        margin: 3rem 0;
+    }
+    /* *****************************************************************
+LICENSE
+***************************************************************** */
+
+    .license {
+        padding: 2em;
+        text-align: center;
+        color: #fff;
+        background-color: rgb(5, 5, 5);
+    }
+
+    .license img {
+        width: 65px;
+        height: auto;
+    }
+
+    .license a {
+        text-decoration: none;
+        color: #DD5735;
+    }
+
+
+
+    /* *****************************************************************
+SLIDER
+***************************************************************** */
+
+    div#sliderContainer {
+        margin: 0 auto;
+        overflow: auto;
+        scroll-behavior: smooth;
+        scroll-padding: 1rem;
+        scroll-snap-type: x mandatory;
+        width: 664px;
+        padding-top: 4em;
+        padding-bottom: 2em;
+    }
+
+    img.sliderImage {
+        height: 300px;
+        margin: 0 2rem;
+        object-fit: cover;
+        object-position: center center;
+        scroll-snap-align: start;
+        width: 300px;
+    }
+
+    div#slider {
+        display: flex;
+        width: max-content;
+    }
+
+    @media (min-width: 1328px) {
+        div#sliderContainer {
+            width: 1328px;
+        }
+}
+/* *****************************************************************
+GO UP THE PAGE BUTTON
+***************************************************************** */
+a#goBack{
+    border-radius:3px;
+    padding:18px;
+    border:1px solid white;
+    font-size:15px;
+    text-align:center;
+    color:#fff;
+    background:rgba(0, 0, 0, 0.25);
+    position:fixed;
+    right:20px;
+    opacity:1;
+    z-index:99999;
+    transition:all ease-in 0.2s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    text-decoration: none;
+}
+a#goBack:before{ content: "\25b2"; }
+a#goBack:hover{
+    background:rgba(0, 0, 0, 1);
+    transition:all ease-in 0.2s;
+}
+a#goBack.goInvisible{
+    bottom:-35px;
+    opacity:0;
+    transition:all ease-in 0.5s;
+}
+
+a#goBack.goVisible{
+    bottom:20px;
+    opacity:1;
+}
+/* *****************************************************************
+VERSION DESKTOP
+***************************************************************** */
+
+@media screen and (min-width: 1200px) {
+    .menu {
+        transition: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo img{
+        width:18em;
+        height:15em;
+    }
+    nav ul {
+        padding: 0;
+        text-align: center;
+        margin: 0;
+        transition: 1s;
+        overflow: hidden;
+        max-height: initial;
+        display:flex;
+    }
+
+    .symbole {
+        z-index: 1;
+    }
+
+    nav ul li {
+        display: inline-block;
+        padding:9px 154px 6px 23px;
+        grid-row: 1/2;
+    }
+
+    .travel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: #fff;
+        margin-top: 80px;
+        padding-top: 50px;
+    }
+    .travel h3 {
+        font-size: 2rem;
+
+    }
+
+    .travel figure {
+        position: relative;
+    }
+
+    .travel img {
+        display: block;
+        object-fit: cover;
+    }
+
+    .travel figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        transition: .7s all;
+    }
+
+    .travel figcaption::after {
+        content: "";
+        position: absolute;
+        right: 3rem;
+        left: 3rem;
+        top: 3rem;
+        bottom: 3rem;
+        border: 4px solid white;
+    }
+
+    .travel figure:hover figcaption {
+        opacity: 1;
+    }
+    .experiences {
+        background-color: #e9dbdb;
+        padding: 4rem 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .experiences p {
+        font-size: 1.4rem;
+        margin-left: 3em;
+        margin-right: 4em;
+        overflow: hidden;
+    }
+    .experiences h2 {
+        font-size: 2.5rem;
+        text-align: left;
+        margin-left: 10.5px;
+        
+    }
+
+    .see-more {
+        padding: 11px;
+        margin-left: 1.5em;
+        font-size: 2rem;
+        color: #000;
+    }
+    .see-more:hover {
+        background-color: rgb(197, 184, 184);
+    }
+
+
+    .experiences {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 3rem;
+    }
+    .experiences article {
+        margin-top: 30px;
+    }
+
+    .travel a {
+        text-decoration: none;
+        color:#e98888;
+    }
+
+    .travel article {
+        width: 30%;
+    }
+
+    .experiences article {
+        width: 40%;
+    }
+
+    .hamburg {
+        display: none;
+    }
+    /* *****************************************************************
+ACTIVITES A MARSEILLE
+***************************************************************** */
+    section.activites-marseille {
+        margin-top: 70px;
+    }
+
+    .container-activities {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: space-between;
+        height: 550px;
+        padding: 25px;
+    }
+
+.item {
+    width: 25%;
+}
+
+/* Re-order items into rows */
+
+.item:nth-child(1) {
+    order: 1;
+    height: 100%;
+}
+
+.item:nth-child(2) {
+    order: 2;
+    height: 62%;
+    margin-bottom: 15px;
+}
+
+.item:nth-child(3) {
+    order: 3;
+    height: 100%;
+}
+
+.item:nth-child(4) {
+    order: 4;
+    height: 49%;
+    margin-bottom: 30px;
+}
+
+.item:nth-child(5) {
+    order: 2;
+    height: 35%;
+}
+
+.item:nth-child(6) {
+    order: 4;
+    height: 45%;
+}
+
+/*Force new columns */
+.container-activities::before,
+.container-activities::after {
+    content: "";
+    flex-basis: 100%;
+    width: 0;
+    order: 2;
+}
+
+article.item {
+    border-radius: 30px;
+}
+
+article.item {
+    position: relative;
+}
+
+.item h3 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100%;
+}
+
+.item h3 {
+    position: absolute;
+    bottom: 0;
+    background: white;
+    margin: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+article.item {
+    width: 23%;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.item h3 {
+    padding: 10px 20px 20px 20px;
+}
+article.item {
+    box-shadow: 0px 5px 20px #999;
+}
+}
+
+/* *****************************************************************
+Interior PAGES Desktop
+***************************************************************** */
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        max-width: 1440px;
+        margin: auto;
+        margin-top: 10em;
+    }
+
+    .adventures {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .adventures h3 {
+        background-color: transparent;
+        color: #030303;
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    .adventures h3 {
+        font-size: 2.5rem;
+        color: #00748d;
+        text-align: center;
+        margin: 7rem 0 5rem 0;
+
+    }
+
+    .Italy h3 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 7rem 0 5rem 0;
+
+    }
+    .Greece h1 {
+        padding-top: 10rem;
+        font-size: 2.5rem;
+        color: #00748d;
+        text-align: center;
+        margin: 7rem 5 10rem 0;
+
+    }
+    .Corsica h1 {
+        padding-top: 10rem;
+        font-size: 2.5rem;
+        color: #00748d;
+        text-align: center;
+        margin: 7rem 5 10rem 0;
+
+    }
+    .Corsica h3 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 7rem 0 5rem 0;
+
+    }
+    .seaside h3 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 7rem 0 5rem 0;
+
+    }
+    .cityescape h3 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 7rem 0 5rem 0;
+
+    }
+
+    .adventures h3::before,
+    .adventures h3::after {
+        content: "-";
+        padding: 0 1rem;
+        color: #ead5f2;
+    }
+    .places {
+        padding: 2em 0;
+    }
+
+    article.placesdescription {
+        font-family: "Nunito", sans-serif;
+        color: #414141;
+        font-size: 1.6rem;
+        background-color: #e9dbdb;
+        margin-top: 5em;
+    }
+    
+    .placesdescription h2 {
+        font-size: 2.5rem;
+        text-align: left;
+        margin: 0;
+        padding-top: 2em;
+        padding-bottom: 1em;
+    }
+    .placesdescription p {
+        text-align: left;
+        margin-left: 2em;
+        padding-bottom: 1em;
+    }
+    .Italy figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+    .Italy img {
+        align-self: stretch;
+        justify-self: stretch;
+        object-fit: cover;
+        padding: 2px;
+        grid-row: span 2;
+    }
+
+    .Italy p {
+        text-align: left;
+        padding: 3em;
+        font-size: 1.4em;
+    }
+
+
+    .seaside figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+
+    .cityescape figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+    .seaside p {
+        text-align: left;
+        padding: 3 5em;
+        font-size: 1.4em;
+    }
+    .cityescape p {
+        text-align: left;
+        padding: 3 5em;
+        font-size: 1.4em;
+    }
+
+    .aboutmegallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+        padding:3.5em;
+        
+    }
+
+    .aboutmegallery img {
+        align-self: stretch;
+        object-fit: cover;
+        grid-row: span 2;
+        border-radius:2em;
+        -webkit-border-radius:2em;
+        -moz-border-radius:2em;
+        -ms-border-radius:2em;
+        -o-border-radius:2em;
+}
+
+    .aboutme {
+        font-family: "Nunito", sans-serif;
+        color: #414141;
+        font-size: 1.8rem;
+        margin-top: 9em;
+        background-color: #e9dbdb;
+        margin-bottom: 2em;
+        padding: 2em;
+
+    }
+
+    .aboutme h1 {
+        font-size: 2.5rem;
+        color: #0d0d0e;
+        text-align: center;
+        margin: 7rem 0 5rem 0;
+
+    }
+
+
+    .aboutme p {
+        text-align: left;
+        padding-left: 2em;
+        padding-right: 2em;
+
+    }
+    .Corsica figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+
+    .Corsica p {
+        margin-left: 5rem;
+        margin-right: 4rem;
+        font-size: 1.4em;
+    }
+
+    .placesportrait {
+        align-self: stretch;
+        object-fit: cover;
+    }
+    .seaside p {
+        margin-left: 5rem;
+        margin-right: 4rem;
+        font-size: 1.4em;
+    }
+
+    .cityescape p {
+        margin-left: 5rem;
+        margin-right: 4rem;
+        font-size: 1.4em;
+        padding-bottom: 5em;
+    }
+
+    .Greece-seasideescapes {
+        margin-top: 10em;
+    }
+
+    .Greece-seasideescapes figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+
+    .Greece-seasideescapes p {
+        margin-right: 5rem;
+        margin-left: 5rem;
+        text-align: center;
+        margin-bottom: 6rem;
+        font-size: 1.5em;
+    }
+
+    .Corsica-seasideescapes figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+
+    .Corsica-seasideescapes p {
+        margin-right: 5rem;
+        margin-left: 5rem;
+        text-align: center;
+        margin-bottom: 6rem;
+        font-size: 1.5em;
+    }
+
+    .banner-southoffrance {
+        background: url(../img/Porquerolle.jpg) left center;
+        background-size: cover;
+        padding: 20rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-summerparis {
+        margin-top: 7rem;
+    }
+    .banner-summerparis {
+        background: url(../img/paris1.jpg) left center;
+        background-size: contain;
+        padding: 20rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .southoffrancegallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 1rem;
+        padding-right: 2em;
+        padding-left: 2em;
+        padding-bottom: 2em;
+    }
+    .southoffrancegallery img {
+        align-self: stretch;
+        justify-self: stretch;
+        object-fit: cover;
+        border: #00748d 3px solid;
+
+    }
+    .summerparisgallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 1rem;
+        padding-right: 2em;
+        padding-left: 2em;
+        padding-bottom: 2em;
+    }
+    .summerparisgallery img {
+        align-self: stretch;
+        justify-self: stretch;
+        object-fit: cover;
+        border: #00748d 3px solid;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .summerparis h1 {
+        padding-top: 1.5em;
+        font-size: 1.5em;
+
+    }
+
+    .summerparis p {
+        text-align: left;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+    }
+    .southoffrance h1 {
+        padding-top: 1.5em;
+        font-size: 1.5em;
+
+    }
+
+    .southoffrance p {
+        text-align: left;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+    }
+
+
+    article.southoffrance {
+        font-family: "Nunito", sans-serif;
+        color: #414141;
+        font-size: 1.8rem;
+    }
+    .southoffrance h2 {
+        font-size: 2.5rem;
+        color: #00748d;
+        text-align: center;
+        margin: 7rem 0 5rem 0;
+        flex: 1 0 100%;
+    }
+    h2::before,
+    h2::after {
+        content: "-";
+        padding: 0 1rem;
+        color: #ead5f2;
+        ;
+    }
+    h2::before,
+    h2::after {
+        content: "-";
+        padding: 0 1rem;
+        color: #ead5f2;
+        ;
+    }
+    .date::before {
+        content: "-";
+        padding: 0 1rem;
+        color: #ead5f2;
+        ;
+    }
+
+    article.summerparis {
+        font-family: "Nunito", sans-serif;
+        color: #414141;
+        font-size: 1.8rem;
+    }
+    .summerparis h2 {
+        font-size: 2.5rem;
+        color: #00748d;
+        text-align: center;
+        margin: 7rem 0 5rem 0;
+        flex: 1 0 100%;
+    }
+    h2::before,
+    h2::after {
+        content: "-";
+        padding: 0 1rem;
+        color: #ead5f2;
+    }
+    h2::before,
+    h2::after {
+        content: "-";
+        padding: 0 1rem;
+        color: #ead5f2;
+    }
+    .date::before {
+        content: "-";
+        padding: 0 1rem;
+        color: #ead5f2;
+    }
+    .Italy p {
+        text-align: left;
+
+    }
+
+
+    .banner-city-escapes {
+        background: url(../img/prague2.jpg) no-repeat center center;
+        background-size: cover;
+        padding: 20rem 3rem;
+        text-align: center;
+        margin-top: 7rem;
+    }
+    .banner-city-escapes h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1.5;
+        display: inline-block;
+        padding: 2rem;
+        font-size:6rem;
+
+    }
+
+    .main-wrapper-cityescapes {
+        max-width: 1100px;
+        margin: auto;
+        padding: 7rem;
+    }
+    .galerie-cityescapes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 5rem;
+    }
+
+    .share-section {
+        width: 100%;
+        text-align: center;
+        border-bottom: 3px solid #eee;
+        padding: 15px 0px;
+        margin-bottom: 30px;
+        
+    }
+
+    .toolbar {
+        padding: 1em 2em;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.5em;
+    }
+
+
+    fieldset {
+        margin: 2em 0;
+        padding: 1em;
+        font-size: 1.6rem;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.5em;
+    }
+    .has-feedback input,
+    textarea,
+    select {
+        width: 100%;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type*="date"],
+    select,
+    textarea {
+        padding: 0.5em 1em;
+        font-size: 1.6rem;
+        color: #333;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.5em;
+        background-color: #fff;
+    }
+    textarea {
+        min-height: 10em;
+        margin-bottom: 3em;
+    }
+
+    .side-table {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.5em;
+    }
+
+    .side-table thead {
+        border-bottom: 2px solid #000;
+    }
+
+    table.side-table {
+        border-collapse: collapse;
+    }
+    .title-back {
+        text-align: center;
+        font-size: 2rem;
+        background: black;
+        color: white;
+        padding: 2rem;
+    }
+
+    .container-back {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main.container-back {
+        padding: 7em;
+    }
+
+    .side-table th,
+    .side-table td {
+        padding: 1em;
+        border: 1px solid #ddd;
+    }
+
+    .side-table tbody tr:nth-child(odd) {
+        background-color: #0000001a;
+    }
+
+    .nav-link {
+        display: block;
+        color: #e6bf16;
+        background: #fff;
+        cursor: pointer;
+        text-align: right;
+        padding: 15px 60px;
+        font-size: 2em;
+        text-decoration: none;
+
+    }
+
+    .comments-recover {
+        margin-top: 10rem;
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .back-door {
+        font-size: 3rem;
+    }
+
+    .visually-hidden {
+        font-size: 2em;
+        padding: 0.5rem;
+        line-height: 2em;
+    }
+}
+
+    /* *****************************************************************
+PAGE  REGISTER
+***************************************************************** */
+
+    .form-size {
+        padding: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .form-height {
+        padding: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .banner-register {
+        margin-top: 10em;
+    }
+
+    .banner-register {
+        background: url(../img/logo3.jpg) left center;
+        background-size: cover;
+        padding: 15rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .has-feedback {
+        position: relative
+    }
+
+    div .form-group {
+        display: block;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 34px;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+    textarea .form-control {
+        height: auto;
+    }
+
+    .form-submit {
+        margin-bottom: 15px;
+        font-size: 90%;
+
+    }
+
+    .register-button {
+        padding: .5rem 1rem;
+        height: 34px;
+        border: 1px solid;
+        border-radius: 1rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        width: 10%;
+        background-color: rgb(255 255 255);
+}
+
+    .register-button:hover {
+        background-color: rgb(233 219 219);
+    }
+    .button-comment:hover {
+        background-color: rgb(233 219 219);
+    }
+    
+    .button-comment {
+        cursor: pointer;
+        border-radius: 1rem;
+        border: 1px solid;
+        padding: .5rem 1rem;
+        height: 34px;
+        background-color: rgb(255 255 255);
+}
+
+/* *****************************************************************
+PAGE ADVENTURES  GALLERY
+***************************************************************** */
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding: 2em;
+    }
+
+    .gallery img {
+        align-self: stretch;
+        justify-self: stretch;
+        object-fit: cover;
+        border: #00748d 3px solid;
+    }
+
+/* *****************************************************************
+COOKIE
+***************************************************************** */
+
+    .cookie-wrapper {
+        position: fixed;
+        bottom: 0;
+        background: #8e9297;
+        width: 100%;
+        color: #f5f6fa;
+        font-size: 1.5rem;
+        padding: 25px 25px 30px 25px;
+    }
+
+    .cookie-wrapper .hide {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+
+    }
+
+    .cookie-wrapper .content {
+        margin-top: 10px;
+
+    }
+
+    .content p {
+        color: #fff;
+        margin: 5px 0 20px 0;
+    }
+
+    .cookie-container a {
+        color: #f5f6fa;
+    }
+
+    .content.buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttons .item {
+        margin: 0 10px;
+        border-radius: 5px;
+        background: #fff;
+        border: #F2F2F2 solid 1px;
+    }
+
+    .buttons-button {
+        padding: 10px 20px;
+        background: #FCBA7F;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .buttons a {
+        color: #fff;
+        font-size: 1em;
+        text-decoration: none;
+    }
+
+
+/* *****************************************************************
+COOKIE POLICY
+***************************************************************** */
+
+    .cookie-policy-page h2 {
+        font-size: 2.8rem;
+        margin-top: 2em;
+    }
+
+    .cookie-policy-page li {
+        font-size: 1.4rem;
+    }
+
+    ul {
+        font-size: 2rem;
+    }
+
+    ul li {
+        text-align: left;
+        margin-top: 10px;
+        padding: 10px 15px;
+    }
+
+
+
+/* *****************************************************************
+HOME PAGE MAIN MOBILE
+***************************************************************** */
+
+@media (max-width: 767px) {
+
+
+    html {
+        font-size: 100%;
+    }
+
+    main {
+        padding-bottom: 0.5rem;
+    }
+    .menu img {
+        width: 10em;
+        height: 9em;
+    }
+
+    .adventures h3 {
+        padding-top: 10em;
+    }
+
+    .gallery {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .adventures h3 {
+        font-size: 1.5rem;
+    }
+    .aboutme h1 {
+        padding-top: 3em;
+    }
+
+    .aboutme p {
+        text-align: center;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+    }
+    .aboutmegallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 1rem;
+        padding-right: 2em;
+        padding-left: 2em;
+        padding-bottom: 2em;
+    }
+
+
+    .banner-main {
+        margin-top: 8em;
+    }
+
+    h1.site-title {
+        font-size: 70px;
+    }
+    figcaption {
+        display: none;
+    }
+
+    article {
+        margin-top: 5em;
+    }
+
+    .experiences h2 {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    .experiences p {
+        margin-left: 3em;
+        margin-right: 3em;
+        text-align: center;
+    }
+
+    .see-more {
+        margin-left: 8rem;
+        text-decoration: none;
+    }
+
+    .leave-comment h1 {
+        font-size: 1.5em;
+        margin-top: 5em;
+    }
+
+    .internet a {
+        margin: 0 1rem;
+    }
+    .social h3 {
+        font-size: 1.5rem;
+    }
+
+    a.comments {
+        font-size: 1.5rem;
+    }
+
+
+
+/* *****************************************************************
+Interior PAGES Mobile
+***************************************************************** */
+    .Greece figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+    .Greece p {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: center;
+    }
+    .Corsica p {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: center;
+    }
+    .banner-city-escapes {
+        margin-top: 7rem;
+    }
+    .banner-city-escapes h1 {
+        font-size: 1.5rem;
+    }
+    .galerie-cityescapes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .adventures h3 {
+        padding-top: 0;
+    }
+
+    .adventures.gallery {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .wrapper .summerparis {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        text-align: center;
+
+    }
+    .summerparisgallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .summerparisgallery img {
+        width: 100%;
+    }
+
+    .share-section {
+        width: 100%;
+        border-top: 3px solid #eee;
+        border-bottom: 3px solid #eee;
+        padding: 15px 0px;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+
+    section.wrapperseasideescape {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10rem 2rem;
+    }
+
+
+    article.placesdescription {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .placesdescription {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    .Italy p {
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+    }
+
+    .placesdescription h1 {
+        font-size: 1.5em;
+    }
+
+    .placesdescription p {
+        line-height: 2rem;
+        text-align: left;
+    }
+
+    .Greece-seasideescapes h1 {
+        margin-top: 10rem;
+        font-size: 1.4rem;
+    }
+
+    .Greece-seasideescapes figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+    .Greece-seasideescapes img {
+        align-self: stretch;
+        justify-self: stretch;
+        object-fit: cover;
+        padding: 2px;
+        grid-row: span 2;
+    }
+
+    .Greece-seasideescapes p {
+        margin-right: 5rem;
+        margin-left: 5rem;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    .Corsica-seasideescapes h1 {
+        font-size: 1.4rem;
+    }
+
+    .Corsica-seasideescapes figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+    .Corsica-seasideescapes img {
+        align-self: stretch;
+        justify-self: stretch;
+        object-fit: cover;
+        padding: 2px;
+        grid-row: span 2;
+    }
+    .Corsica-seasideescapes p {
+        margin-right: 5rem;
+        margin-left: 5rem;
+        text-align: center;
+
+        margin-bottom: 3em;
+    }
+    .seaside figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .seaside p {
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+    }
+    .cityescape figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .cityescape p {
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+    }
+
+    .Italy figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+
+    .Corsica figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+    }
+
+    .special-pics figure {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+
+    }
+    .special-pics img {
+        align-self: stretch;
+        justify-self: stretch;
+        border: #eee 3px solid;
+    }
+    .special-pics {
+        margin-top: 5rem;
+    }
+
+    .license {
+        padding: 2em;
+    }
+
+    .register-button {
+        width: 100%;
+    }
+    
+    .cookie-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--secondaryColor);
+        max-width: 365px;
+        border-radius: 15px;
+        color: #f5f6fa;
+        font-size: 1.5rem;
+        padding: 25px 25px 30px 25px;
+    }
+
+    .buttons .item {
+        margin: 0 10px;
+        border-radius: 5px;
+    }
+
+    .cookie-policy-page ul {
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    .cookie-policy-page ul {
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+    .query {
+        margin-bottom: 10px;
+    }
+
+    textarea.query {
+        padding: 20px;
+    }
+
+    button.button-comment {
+        background-color: var(--secondaryColor);
+    }
+
+    .side-table {
+        margin-top: 7em;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--secondaryColor);
+        font-size: 1.5rem;
+    }
+
+    .side-table thead {
+        text-align: left;
+    }
+    
+    .side-table {
+        line-height: 1.5em;
+    }
+    .side-table {
+    -moz-box-shadow: 0 1px 6px 0 rgba(0,0,0,.12), 0 1px 6px 0 rgba(0,0,0,.12);
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.12), 0 1px 6px 0 rgba(0,0,0,.12);
+    }
+    
+    .table-line tr {
+        background-color: #0000001a;
+    
+    }
+}

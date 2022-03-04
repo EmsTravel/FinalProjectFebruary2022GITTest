@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Backpack in my hand - Emi's Travels,travel blog">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- GoogleFonts CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- STYLE CDN -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!--<link rel="stylesheet" href="assets/css/styleprojet.css"> -->
+    <link rel="stylesheet" href="assets/css/styleproject1.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title> 
+    <?php if (isset($title)) : ?> <?=$title ;?>
+        <?php  else : ?> <?="Travel-Blog"?>
+        <?php  endif ?> 
+    </title>
+</head>
+
+<body>
+<header>
+    <nav>
+    <div class="hamburg">
+        <i class="fa fa-bars fa-2x"></i>
+    </div>
+    <div class='menu'>
+    <a href="index.php" class="logo">
+		<img src="assets/img/EC2.svg" alt="Logo de Emi">
+	</a>
+    <ul>
+        <li><a href="index.php?page=places">PLACES</a></li>
+        <li><a href="index.php?page=aboutme">ABOUT ME</a></li>
+        <li><a href="index.php?page=register">NEWSLETTER</a></li>
+    </ul>
+    </div>
+    </nav>
+</header>
+
+<main class="wrapper" >
+<?php include $template;?>
+</main>
+
+    <footer>
+        <div class="wrapper-bottom">
+            <div class="social">
+                <a href="index.php?page=commentsDisplay"class='comments'>Leave a comment</a>
+                    <h3>Stay Connected</h3>
+            <div class="internet">
+                <a href="https://www.instagram.com/em.s.travels/" class="instagram"></a>
+                <a href="https://twitter.com/" class="twitter"></a>
+                <a href="https://www.facebook.com/" class="facebook"></a>
+                <a href="https://dribbble.com/" class="dribbble"></a>
+            </div>
+            </div>
+        </div>
+    </footer>
+        <div class="license">
+        <p>2021 Backpack in one hand.All rights reserved to Emilia Condulet</p>
+        </div>
+<!---COOKIE-->
+<?php if(!isset($_COOKIE['Backpack'])): ?>
+<div class='cookie-wrapper'>
+    <div class='content'>
+        <p>We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept All”, you consent to the use of ALL the cookies. However, you may visit "Cookie Settings" to provide a controlled consent.</p>
+        <div class='buttons'>
+    <button class='item'>Accept All</button>
+        <a href="index.php?page=cookiePolicy" class='item2'>Cookie Settings</a>
+    
+        </div>
+    </div>
+    </div>
+    <?php endif; ?>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/cookie.js"></script>
+    <script src="assets/js/buttonUp.js"></script>
+    <script src="assets/js/navScroll.js"></script>
+</body>
+
+</html>
