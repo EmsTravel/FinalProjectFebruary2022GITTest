@@ -4,18 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-   
     <title>Backpack in one hand Backend</title>
-
     <link rel="stylesheet" href="assets/css/styleprojet.css">
 </head>
   <header>
   
   <?php if(isset($_SESSION['user'])): ?>
-  
-     <nav> <a class="nav-link" href="index.php?page=logout">Sign out</a>
-     </nav>
-     
+    <nav> <a class="nav-link" href="index.php?page=logout">Sign out</a>
+    </nav>
   <?php endif; ?>
   
   </header>
@@ -23,38 +19,29 @@
 
     <?php if(isset($_SESSION['user'])): ?>
     
-    
     <table class='side-table'>
-     <thead>
-         <tr>
-    
+    <thead>
+        <tr>
             <th>Email</th>
             <th>Comments</th>
-         </tr>
-   </thead>
-   
-        <tbody class='table-line'>
-           <?php foreach($comments as $comment):?>
-             <tr>
-      
-               <td><?= htmlspecialchars($comment['email'])?></td>
-  
- 
-               <td><?= htmlspecialchars($comment['text'])?></td>
- 
-             </tr>
+        </tr>
+  </thead>
+  <tbody class='table-line'>
+    <?php foreach($comments as $comment):?>
+        <tr>
+        <td><?= htmlspecialchars($comment['email'])?></td>
+        <td><?= htmlspecialchars($comment['text'])?></td>
+        </tr>
     <?php endforeach;?>
   
 </tbody>
 </table>
 
-   <?php endif; ?>
-   
-   
+  <?php endif; ?>
 <?php include $template ?>
- 
+
     </main>
- 
+
 <script src="js/script.js"></script>
   </body>
 </html>

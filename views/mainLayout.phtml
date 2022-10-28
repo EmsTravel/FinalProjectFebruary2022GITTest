@@ -9,6 +9,7 @@
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- GoogleFonts CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300&family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
@@ -17,7 +18,6 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <!--<link rel="stylesheet" href="assets/css/styleprojet.css"> -->
     <link rel="stylesheet" href="assets/css/styleproject1.css">
-    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title> 
     <?php if (isset($title)) : ?> <?=$title ;?>
@@ -29,25 +29,49 @@
 <body>
 <header>
     <nav>
-    <div class="hamburg">
-        <i class="fa fa-bars fa-2x"></i>
-    </div>
-    <div class='menu'>
-    <a href="index.php" class="logo">
-		<img src="assets/img/EC2.svg" alt="Logo de Emi">
-	</a>
-    <ul>
-        <li><a href="index.php?page=places">PLACES</a></li>
-        <li><a href="index.php?page=aboutme">ABOUT ME</a></li>
-        <li><a href="index.php?page=register">NEWSLETTER</a></li>
-    </ul>
-    </div>
+        <div class="hamburg">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+            <div class='menu'>
+            <div class='Nav_Submenu'>
+                    <ul>
+                        <li class='bzzz'><a href="index.php?page=places">PLACES</a></li>
+                        <li class='grrr'><a href="index.php?page=aboutme">ABOUT ME</a></li>
+                    </ul>
+            </div>
+            <a href="index.php" class="logo">
+                <img src="assets/img/travels-logo.svg" alt="Logo de Emi">
+            </a>
+                
+            <div class='newsletter'>
+                <ul>
+                    <li class='brrr'><a href="index.php?page=register">NEWSLETTER</a></li>
+                </ul>
+            </div>
+            </div>
+    
+    <div class='header_border'></div>
     </nav>
 </header>
 
 <main class="wrapper" >
 <?php include $template;?>
 </main>
+<!---COOKIE-->
+<?php if(!isset($_COOKIE['Backpack'])): ?>
+<div class='cookie-wrapper'>
+    <div class='content'>
+        <p>We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept All”, you consent to the use of ALL the cookies. However, you may visit "Cookie Settings" to provide a controlled consent.</p>
+        <div class='buttons'>
+    <button class='item'>Accept All</button>
+    <a href="index.php?page=cookie"></a>
+
+        <a href="index.php?page=cookiePolicy" class='item2'>Cookie Settings</a>
+    
+        </div>
+    </div>
+    </div>
+    <?php endif; ?>
 
     <footer>
         <div class="wrapper-bottom">
@@ -66,25 +90,14 @@
         <div class="license">
         <p>2021 Backpack in one hand.All rights reserved to Emilia Condulet</p>
         </div>
-<!---COOKIE-->
-<?php if(!isset($_COOKIE['Backpack'])): ?>
-<div class='cookie-wrapper'>
-    <div class='content'>
-        <p>We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept All”, you consent to the use of ALL the cookies. However, you may visit "Cookie Settings" to provide a controlled consent.</p>
-        <div class='buttons'>
-    <button class='item'>Accept All</button>
-        <a href="index.php?page=cookiePolicy" class='item2'>Cookie Settings</a>
-    
-        </div>
-    </div>
-    </div>
-    <?php endif; ?>
+
 
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/slider.js"></script>
     <script src="assets/js/cookie.js"></script>
+    <script src="assets/js/headerScroll.js"></script>
+    <script src="assets/js/slider.js"></script>
     <script src="assets/js/buttonUp.js"></script>
-    <script src="assets/js/navScroll.js"></script>
+    
 </body>
 
 </html>

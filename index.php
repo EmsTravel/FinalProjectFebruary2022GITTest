@@ -1,5 +1,4 @@
 <?php
-
 //show PHP errors
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
@@ -102,7 +101,6 @@ else
         $controller = new AddArticleController();
         $controller -> addArticles();
         break;
-    
     case 'cookie':
         $controller =new CookiesController();
         $controller -> makeCookie();
